@@ -1,0 +1,36 @@
+@use '../utils/variables' as v ;
+@use '../utils/functions' as f ;
+@use '../utils/mixins' as m ;
+
+/* Hero */
+
+.hero {
+    background-color: v.$background-main-color ;
+    text-align: center;
+    padding: f.pxToRem(39) 0 f.pxToRem(57) 0 ;
+
+    @include m.media-breakpoint-up(desktop) {
+        padding: f.pxToRem(30) 0;
+    }
+    
+    h1 {
+        font-size: map-get(v.$font-sizes, fs-700);
+        font-weight: map-get(v.$font-weights, bold);
+        margin: 0 f.pxToRem(50);
+
+        @include m.media-breakpoint-up(desktop) {
+            font-size: map-get(v.$font-sizes, fs-900);
+        }
+    }
+
+    p {
+        color: v.$font-secondary-color;
+        font-size: map-get(v.$font-sizes, fs-500);
+        font-weight: map-get(v.$font-weights, light);
+        margin: 1rem f.pxToRem(30) 0 f.pxToRem(30);
+    }
+
+    .cta {
+        margin-top: f.pxToRem(27);
+    }
+} 

@@ -1,0 +1,8 @@
+@use './variables' as v ;
+
+// Media queries
+@mixin media-breakpoint-up($breakpoint) {
+    @media only screen and (min-width: map-get(v.$breakpoints-up, $breakpoint)) {
+        @content
+    }
+};

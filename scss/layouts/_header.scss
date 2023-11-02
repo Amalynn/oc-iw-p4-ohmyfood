@@ -1,0 +1,20 @@
+@use '../utils/functions' as f ;
+@use '../utils/variables' as v ;
+@use '../utils/mixins' as m ;
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: v.$header-background-color ;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+    height: f.pxToRem(63);  
+    
+    @include m.media-breakpoint-up(desktop) {
+        height: f.pxToRem(96);
+    }
+}

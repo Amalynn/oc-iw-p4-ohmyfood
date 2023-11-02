@@ -40,4 +40,68 @@ a {
   text-decoration: none;
 }
 
+/* Call to Action Button */
+.cta {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, hsl(317deg, 100%, 74%), hsl(267deg, 66%, 60%));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.hero .cta {
+  height: 3.125rem;
+  width: 13.625rem;
+}
+.menu .cta {
+  height: 3.125rem;
+  width: 11.625rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  height: 3.9375rem;
+}
+@media only screen and (min-width: 1024px) {
+  .header {
+    height: 6rem;
+  }
+}
+
+/* Hero */
+.hero {
+  background-color: hsl(0deg, 0%, 96%);
+  text-align: center;
+  padding: 2.4375rem 0 3.5625rem 0;
+}
+@media only screen and (min-width: 1024px) {
+  .hero {
+    padding: 1.875rem 0;
+  }
+}
+.hero h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 3.125rem;
+}
+@media only screen and (min-width: 1024px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+.hero p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin: 1rem 1.875rem 0 1.875rem;
+}
+.hero .cta {
+  margin-top: 1.6875rem;
+}
+
 /*# sourceMappingURL=main.css.map */
