@@ -7,7 +7,7 @@
     "sass": "1.56.0"
   },
   "scripts": {
-    "sass": "sass --watch ./scss:./assets/css/style.css"
+    "sass": "sass --watch ./scss:./assets/css"
   },
   "keywords": [],
   "author": "Amandine EBNER",

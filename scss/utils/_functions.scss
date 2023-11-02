@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+/// Convert px to rem 
+/// 
+/// @param {number (unitless) } $px
+///     The numbre of pixels
+/// @return {number} 
+///     The corresponding number of rems
+@function pxToRem($px){
+    @if (math.is-unitless($px)) {
+        $rem: math.div($px, 16) ;
+        @return $rem * 1rem;
+    }
+    @error "Don't use units when using the pxToRem() function, only numbers";      
+}
