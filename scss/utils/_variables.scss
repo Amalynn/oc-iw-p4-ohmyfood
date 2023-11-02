@@ -10,14 +10,15 @@ $colors: (
     "soft-violet": hsl(267, 66%, 60%),
     "white-clr": hsl(0, 0%, 100%),
     "very-dark-gray": hsl(0, 0%, 21%),
-    "very-light-gray": hsl(0, 0%, 96%),
+    "very-light-gray": hsl(0, 0%, 92%),
+    "very-light-gray-mostly-white": hsl(0, 0%, 97%),
     "dark-gray": hsl(0, 0%, 49%),
     "black-clr": hsl(0, 0%, 0%),
     "very-light-pink": hsl(317, 100%, 74%)
 );
 
 $font-primary-color: map-get($colors, black-clr) ;
-$font-secondary-color: map-get($colors, very-dark-grey) ;
+$font-secondary-color: map-get($colors, very-dark-gray) ;
 $font-tertiary-color: map-get($colors, white-clr) ;
 
 $header-background-color: map-get($colors, white-clr) ;
@@ -29,9 +30,9 @@ $body-text-color: $font-primary-color;
 
 $location-icon-color: map-get($colors, very-dark-gray);
 $location-text-color: $font-secondary-color;
+$location-background-color: map-get($colors, very-light-gray);
 
-$background-location-color: map-get($colors, very-dark-gray);
-$background-main-color: map-get($colors, very-light-gray);
+$background-main-color: map-get($colors, very-light-gray-mostly-white);
 
 $working-icon-color: map-get($colors, dark-gray);
 

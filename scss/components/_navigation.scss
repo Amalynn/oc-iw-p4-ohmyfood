@@ -1,0 +1,48 @@
+@use '../utils/variables' as v ;
+@use '../utils/functions' as f ;
+@use '../utils/mixins' as m ;
+
+/* Navigation */
+.nav {
+    ul {
+        @include m.reset-list ;
+
+        @include m.media-breakpoint-up(desktop) {
+            display: flex;
+            flex-direction: row;
+        }
+
+        > li:not(:last-child) {
+            margin-bottom: f.pxToRem(7);
+
+            @include m.media-breakpoint-up(desktop) {
+                margin-bottom: 0;
+                margin-right: f.pxToRem(10);
+            }
+        }
+
+        li:nth-child(3), li:nth-child(4) {
+            font-weight: map-get(v.$font-weights, regular);
+        }
+
+        span {
+            display: inline-block;
+            height: f.pxToRem(13);
+            width: f.pxToRem(12);
+
+            font-size: f.pxToRem(13);
+            margin-right: f.pxToRem(11);
+        } 
+        
+        @include m.media-breakpoint-up(desktop) {
+            li:nth-child(2) {
+                margin-right: f.pxToRem(50);
+            }
+
+            li:nth-child(4) {
+                margin-right: f.pxToRem(65);
+            }
+        }
+    }
+    
+}

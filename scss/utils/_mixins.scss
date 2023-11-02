@@ -6,3 +6,8 @@
         @content
     }
 };
+
+// Reset list 
+@mixin reset-list {
+    list-style: none;
+}
