@@ -1,4 +1,6 @@
 @use '../utils/variables' as v;
+@use '../utils/functions' as f;
+@use '../utils/mixins' as m;
 @use "sass:map"; 
 
 /* Base */
@@ -7,12 +9,24 @@ body {
     font-family: v.$roboto ;
     font-weight: map-get(v.$font-weights, medium);
     font-size: map-get(v.$font-sizes, fs-350) ;
-    color: v.$body-text-color;
+    color: v.$body-text-color;    
 }
 
 a {
     color: inherit;
     text-decoration: none;
 }
+
+.wrapper {    
+    width: 100%;
+    max-width: 1080px; 
+    padding:   f.pxToRem(50) f.pxToRem(18) f.pxToRem(67) f.pxToRem(18);
+    
+    @include m.media-breakpoint-up(tablet) {
+        padding: f.pxToRem(30) f.pxToRem(50);
+        box-sizing: content-box;        
+    }    
+}
+    
 
     

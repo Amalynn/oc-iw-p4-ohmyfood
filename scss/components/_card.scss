@@ -1,0 +1,26 @@
+@use '../utils/variables' as v ;
+@use '../utils/functions' as f ;
+
+/* Cards */
+.card {
+    background-color: v.$card-background-color;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+
+    &__content {
+        display: flex;
+        padding: 16px 25px 12px 13px; 
+        justify-content: space-between;       
+    }
+
+    h3 {
+        margin-bottom: f.pxToRem(5);
+    }
+
+    &__icon {
+       display: flex;
+       align-items: center;
+       font-size: 22px;
+    }
+}

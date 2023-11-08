@@ -1,0 +1,12 @@
+@use '../utils/variables' as v ;
+@use '../utils/functions' as f ;
+
+/* Labels */
+.label-new {
+    color: v.$label-new-text-color ;
+    text-align: center;
+    background-color: v.$label-new-background-color;
+    padding: f.pxToRem(4) f.pxToRem(9);
+    border-radius: 2px;
+    width: 80px;    
+}

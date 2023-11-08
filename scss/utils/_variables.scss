@@ -21,6 +21,8 @@ $font-primary-color: map-get($colors, black-clr) ;
 $font-secondary-color: map-get($colors, very-dark-gray) ;
 $font-tertiary-color: map-get($colors, white-clr) ;
 
+$background-main-color: map-get($colors, very-light-gray-mostly-white);
+
 $header-background-color: map-get($colors, white-clr) ;
 
 $footer-background-color: map-get($colors, very-dark-gray);
@@ -32,12 +34,15 @@ $location-icon-color: map-get($colors, very-dark-gray);
 $location-text-color: $font-secondary-color;
 $location-background-color: map-get($colors, very-light-gray);
 
-$background-main-color: map-get($colors, very-light-gray-mostly-white);
-
 $working-icon-color: map-get($colors, dark-gray);
+$working-background-color: map-get($colors, white-clr) ;
 
-$new-restaurants-text-color: map-get($colors, dark-cyan);
-$new-restaurants-background-color: map-get($colors, very-soft-cyan);
+$restaurants-background-color: $background-main-color ;
+
+$card-background-color: map-get($colors, white-clr);
+
+$label-new-text-color: map-get($colors, dark-cyan);
+$label-new-background-color: map-get($colors, very-soft-cyan);
 
 $cta-background-color: linear-gradient(to bottom, map-get($colors, very-light-pink), map-get($colors, soft-violet));
 $heart-icon-background-color: linear-gradient(to top, map-get($colors, very-light-pink), map-get($colors, soft-violet));
