@@ -2,7 +2,8 @@
 @use '../utils/functions' as f ;
 @use '../utils/mixins' as m ;
 
-/* Footer */
+/* ------------------------------------------------------ */
+/* FOOTER */
 .footer {
     color: v.$footer-text-color ;
     background-color: v.$footer-background-color;

@@ -143,10 +143,11 @@ a {
   width: 80px;
 }
 
-/* Header */
+/* --------------------------------------------------- */
+/* HEADER */
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: hsl(0deg, 0%, 100%);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -156,6 +157,16 @@ a {
   .header {
     height: 6rem;
   }
+}
+.header__arrow-back {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin-left: 1.0625rem;
+}
+.header img {
+  margin: 0 auto;
 }
 
 /* Hero */
@@ -189,7 +200,8 @@ a {
   margin-top: 1.6875rem;
 }
 
-/* Footer */
+/* ------------------------------------------------------ */
+/* FOOTER */
 .footer {
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(0deg, 0%, 21%);

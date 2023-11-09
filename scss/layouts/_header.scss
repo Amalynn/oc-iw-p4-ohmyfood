@@ -2,11 +2,12 @@
 @use '../utils/variables' as v ;
 @use '../utils/mixins' as m ;
 
-/* Header */
+/* --------------------------------------------------- */
+/* HEADER */
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     background-color: v.$header-background-color ;
@@ -16,5 +17,18 @@
     
     @include m.media-breakpoint-up(desktop) {
         height: f.pxToRem(96);
+    }
+
+    &__arrow-back {
+        display: flex;
+        align-items: center;
+
+        height: 30px;
+        width: 30px;
+        margin-left: f.pxToRem(17);
+    }
+
+    img {
+        margin: 0 auto;
     }
 }
