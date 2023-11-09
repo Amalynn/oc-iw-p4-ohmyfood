@@ -20,7 +20,7 @@ a {
 .wrapper {    
     width: 100%;
     max-width: 1080px; 
-    padding:   f.pxToRem(50) f.pxToRem(18) f.pxToRem(67) f.pxToRem(18);
+    padding: f.pxToRem(50) f.pxToRem(18) f.pxToRem(67) f.pxToRem(18);
     
     @include m.media-breakpoint-up(tablet) {
         padding: f.pxToRem(30) f.pxToRem(50);

@@ -18,8 +18,101 @@
 
 /* Working Section */
 .working {
+    display: flex;
+    justify-content: center;
+
     background-color: v.$working-background-color;
-    height: 100px;
+
+    .wrapper {
+        @include m.media-breakpoint-up(tablet) {
+            padding-top: f.pxToRem(50);
+            padding-bottom: f.pxToRem(50);
+        }
+
+    }
+    
+    &__steps {
+        list-style: none;
+        counter-reset: working-steps-counter;
+
+        margin-left: f.pxToRem(12);
+
+        @include m.media-breakpoint-up(desktop){
+            display: flex;
+            column-gap: 36px;
+        }
+
+        > li {
+            counter-increment: working-steps-counter;
+            display: block;
+            position: relative;    
+            
+            @include m.media-breakpoint-up(desktop) {
+                flex: 1 1 auto;
+            }
+        }
+
+        > li:not(:last-child) {
+            margin-bottom: f.pxToRem(25);
+
+            @include m.media-breakpoint-up(desktop) {
+                margin-bottom: 0;
+            }
+        }
+
+        > li::before {
+            content: counter(working-steps-counter) "";
+            color: v.$font-tertiary-color;
+            font-size: map-get(v.$font-sizes, fs-300);
+            background-color: map-get(v.$colors, soft-violet);
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: calc(50% - 12px);
+            left: -12px;
+        }
+
+        .card {
+            display: flex; 
+            padding: f.pxToRem(28) 0;
+            align-items: baseline;             
+
+            border-radius: 20px;     
+        }
+
+        i[data-working-steps-icon="mobile"] {
+            color: map-get(v.$colors, dark-gray) ;
+            height: 20px;
+            width: 13px;
+            margin: 0 f.pxToRem(27) 0 f.pxToRem(33); 
+        }
+
+        i[data-working-steps-icon="list"] {
+            color: map-get(v.$colors, dark-gray) ;
+            height: 16px;
+            width: 16px;
+            margin: 0 f.pxToRem(27) 0 f.pxToRem(33); 
+        }
+
+        i[data-working-steps-icon="store"] {
+            color: map-get(v.$colors, soft-violet) ;
+            height: 18px;
+            width: 18px;
+            margin: 0 f.pxToRem(27) 0 f.pxToRem(33); 
+        }        
+    }   
+}
+
+.restaurants h2,
+.working h2 {
+    font-size: map-get(v.$font-sizes, fs-800);
+    font-weight: map-get(v.$font-weights, bold);
+    margin-bottom: f.pxToRem(25);
 }
 
 /* Restaurants Section */
@@ -27,13 +120,7 @@
     display: flex;
     justify-content: center;
 
-    background-color: v.$restaurants-background-color;     
-
-    h2 {
-        font-size: map-get(v.$font-sizes, fs-800);
-        font-weight: map-get(v.$font-weights, bold);
-        margin-bottom: f.pxToRem(25);
-    }
+    background-color: v.$restaurants-background-color;    
 
     & > a {
         width: 100%;

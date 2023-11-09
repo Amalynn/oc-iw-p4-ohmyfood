@@ -5,14 +5,18 @@
 .card {
     background-color: v.$card-background-color;
     border-radius: 15px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     overflow: hidden;
+
+    &--gray {
+        background-color: map-get(v.$colors, very-light-gray-mostly-white);
+    }
 
     &__content {
         display: flex;
         padding: 16px 25px 12px 13px; 
         justify-content: space-between;       
-    }
+    }    
 
     h3 {
         margin-bottom: f.pxToRem(5);
@@ -24,3 +28,4 @@
        font-size: 22px;
     }
 }
+
