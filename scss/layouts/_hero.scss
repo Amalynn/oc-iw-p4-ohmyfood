@@ -2,7 +2,8 @@
 @use '../utils/functions' as f ;
 @use '../utils/mixins' as m ;
 
-/* Hero */
+/* -------------------------------------------------- */
+/* HERO */
 
 .hero {
     background-color: v.$background-main-color ;
@@ -34,3 +35,17 @@
         margin-top: f.pxToRem(27);
     }
 } 
+
+.hero-restaurants {
+    height: f.pxToRem(275);
+
+    @include m.media-breakpoint-up(destop) {
+        height: f.pxToRem(383);
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
