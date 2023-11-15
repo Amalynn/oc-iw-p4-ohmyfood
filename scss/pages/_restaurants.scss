@@ -1,0 +1,100 @@
+@use '../utils/variables' as v ;
+@use '../utils/mixins' as m ;
+@use '../utils/functions' as f;
+
+/* ------------------------------------------------- */
+/* Restaurant menu */ 
+
+.menu { 
+
+    &__background {
+        position: relative;
+        z-index: 1;
+        
+        background-color: v.$background-main-color;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+
+        &-header {
+            height: 32px;            
+            margin-top: -60px ;
+        }
+
+        &-body {
+            padding: f.pxToRem(5) f.pxToRem(13) f.pxToRem(40) f.pxToRem(13); 
+        }
+
+    }   
+
+    &__restaurant-title {
+        display: flex;
+        justify-content: space-between;
+        h1 {
+            font-family: v.$shrikhand;
+            font-size: map-get(v.$font-sizes, fs-800);
+            font-weight: map-get(v.$font-weights, regular);
+            margin-left: f.pxToRem(4);            
+        }
+    }
+
+    &__icon {
+        margin-right: f.pxToRem(24);
+    }
+
+    &__starter,
+    &__main,
+    &__dessert {
+        margin: f.pxToRem(40) 0;
+    }    
+
+    &__starter h2,
+    &__main h2,
+    &__dessert h2 {
+        font-size: map-get(v.$font-sizes, fs-350);
+        font-weight: map-get(v.$font-weights, light);
+        text-transform: uppercase;
+        margin-bottom: f.pxToRem(21) ;
+    }
+
+    &__subtitle-underline {
+        text-decoration: underline map-get(v.$colors, very-soft-cyan) solid ;
+        text-underline-offset: f.pxToRem(9);
+        text-decoration-thickness: f.pxToRem(3);
+    }
+
+    &__starter-description > article:not(:last-child),
+    &__main-description > article:not(:last-child),
+    &__dessert-description > article:not(:last-child) {
+        margin-top: f.pxToRem(12);
+        margin-bottom: f.pxToRem(12);
+    }   
+
+    .card__content {
+        padding: f.pxToRem(15);
+
+        h3 {
+            font-weight: map-get(v.$font-weights, medium);
+            font-size: map-get(v.$font-sizes, fs-500);
+        }
+
+        p {
+            font-weight: map-get(v.$font-weights, light);
+            font-size: map-get(v.$font-sizes, fs-300);
+        }
+    }
+
+    .card__price {
+        display: flex;
+        align-items: flex-end;
+
+        p {
+            color: map-get(v.$colors, very-dark-gray);
+            font-size: map-get(v.$font-sizes, fs-300);
+            font-weight: map-get(v.$font-weights, bold);
+        } 
+    }
+
+    &__button {
+        text-align: center;        
+    }    
+}

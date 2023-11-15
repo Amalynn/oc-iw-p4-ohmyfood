@@ -398,4 +398,75 @@ a {
   font-weight: 300;
 }
 
+/* ------------------------------------------------- */
+/* Restaurant menu */
+.menu__background {
+  position: relative;
+  z-index: 1;
+  background-color: hsl(0deg, 0%, 97%);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.menu__background-header {
+  height: 32px;
+  margin-top: -60px;
+}
+.menu__background-body {
+  padding: 0.3125rem 0.8125rem 2.5rem 0.8125rem;
+}
+.menu__restaurant-title {
+  display: flex;
+  justify-content: space-between;
+}
+.menu__restaurant-title h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-left: 0.25rem;
+}
+.menu__icon {
+  margin-right: 1.5rem;
+}
+.menu__starter, .menu__main, .menu__dessert {
+  margin: 2.5rem 0;
+}
+.menu__starter h2, .menu__main h2, .menu__dessert h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 1.3125rem;
+}
+.menu__subtitle-underline {
+  text-decoration: underline hsl(165deg, 56%, 74%) solid;
+  text-underline-offset: 0.5625rem;
+  text-decoration-thickness: 0.1875rem;
+}
+.menu__starter-description > article:not(:last-child), .menu__main-description > article:not(:last-child), .menu__dessert-description > article:not(:last-child) {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.menu .card__content {
+  padding: 0.9375rem;
+}
+.menu .card__content h3 {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.menu .card__content p {
+  font-weight: 300;
+  font-size: 0.9375rem;
+}
+.menu .card__price {
+  display: flex;
+  align-items: flex-end;
+}
+.menu .card__price p {
+  color: hsl(0deg, 0%, 21%);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+.menu__button {
+  text-align: center;
+}
+
 /*# sourceMappingURL=main.css.map */
