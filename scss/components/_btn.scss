@@ -1,7 +1,8 @@
 @use '../utils/variables' as v ;
 @use '../utils/functions' as f ;
 
-/* Call to Action Button */
+/* ------------------------------------------------------------ */
+/* CALL TO ACTION BUTTON */
 .cta {
     color: v.$font-tertiary-color;
     font-weight: map-get(v.$font-weights, medium);

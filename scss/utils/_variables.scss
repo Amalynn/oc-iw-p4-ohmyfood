@@ -34,12 +34,7 @@ $location-icon-color: map-get($colors, very-dark-gray);
 $location-text-color: $font-secondary-color;
 $location-background-color: map-get($colors, very-light-gray);
 
-$working-icon-color: map-get($colors, dark-gray);
 $working-background-color: map-get($colors, white-clr) ;
-
-$restaurants-background-color: $background-main-color ;
-
-$card-background-color: map-get($colors, white-clr);
 
 $label-new-text-color: map-get($colors, dark-cyan);
 $label-new-background-color: map-get($colors, very-soft-cyan);

@@ -1,7 +1,8 @@
 @use '../utils/variables' as v ;
 @use '../utils/functions' as f ;
 
-/* Labels */
+/* ------------------------------------------------------ */
+/* LABELS */
 .label-new {
     color: v.$label-new-text-color ;
     text-align: center;

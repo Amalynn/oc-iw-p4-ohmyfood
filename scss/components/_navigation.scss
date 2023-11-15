@@ -2,12 +2,13 @@
 @use '../utils/functions' as f ;
 @use '../utils/mixins' as m ;
 
-/* Navigation */
+/* --------------------------------------------------- */
+/* NAVIGATION */
 .nav {
     ul {
         @include m.reset-list ;
 
-        @include m.media-breakpoint-up(desktop) {
+        @include m.media-breakpoint-up(tablet) {
             display: flex;
             flex-direction: row;
         }
@@ -15,7 +16,7 @@
         > li:not(:last-child) {
             margin-bottom: f.pxToRem(7);
 
-            @include m.media-breakpoint-up(desktop) {
+            @include m.media-breakpoint-up(tablet) {
                 margin-bottom: 0;
                 margin-right: f.pxToRem(10);
             }
@@ -34,15 +35,16 @@
             margin-right: f.pxToRem(11);
         } 
         
-        @include m.media-breakpoint-up(desktop) {
+        @include m.media-breakpoint-up(tablet) {
             li:nth-child(2) {
                 margin-right: f.pxToRem(50);
-            }
+            }            
+        }
 
+        @include m.media-breakpoint-up(desktop) {
             li:nth-child(4) {
                 margin-right: f.pxToRem(65);
             }
         }
-    }
-    
+    }    
 }

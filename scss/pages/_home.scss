@@ -5,6 +5,19 @@
 /* ------------------------------------------------ */
 /* OHMYFOOD HOMEPAGE  */
 
+/* Wrapper */
+.wrapper {    
+    width: 100%;
+    max-width: 1080px; 
+    padding: f.pxToRem(50) f.pxToRem(18) f.pxToRem(67) f.pxToRem(18);
+    
+    @include m.media-breakpoint-up(tablet) {
+        padding: f.pxToRem(30) f.pxToRem(50);
+        box-sizing: content-box;        
+    }    
+}
+
+
 /* Location Section */
 .location {
     color: v.$location-text-color ;
@@ -15,6 +28,7 @@
     gap: 1rem;
     padding: 1rem 0;    
 }
+
 
 /* Working Section */
 .working {
@@ -115,12 +129,13 @@
     margin-bottom: f.pxToRem(25);
 }
 
+
 /* Restaurants Section */
 .restaurants { 
     display: flex;
     justify-content: center;
 
-    background-color: v.$restaurants-background-color;    
+    background-color: map-get(v.$colors, white-clr);    
 
     & > a {
         width: 100%;

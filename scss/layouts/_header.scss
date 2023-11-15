@@ -7,8 +7,11 @@
 
 .header {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+
+    position: relative;
+    z-index: 1;
 
     background-color: v.$header-background-color ;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -21,14 +24,19 @@
 
     &__arrow-back {
         display: flex;
+        justify-content: center;
         align-items: center;
 
         height: 30px;
-        width: 30px;
-        margin-left: f.pxToRem(17);
-    }
+        width: 30px;        
 
-    img {
-        margin: 0 auto;
-    }
+        position: absolute;
+        top: calc(50% - 15px);
+        left: 2%;
+
+        i {
+            font-size: map-get(v.$font-sizes, fs-350);
+            width: f.pxToRem(17);
+        }
+    }    
 }
