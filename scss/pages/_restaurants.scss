@@ -5,26 +5,63 @@
 /* ------------------------------------------------- */
 /* Restaurant menu */ 
 
-.menu { 
+.menu {     
 
     &__background {
         position: relative;
         z-index: 1;
-        
+
         background-color: v.$background-main-color;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
 
+        @include m.media-breakpoint-up(tablet) {
+            width: 90%;
+            max-width: 1055px;
+            margin: auto;
+        }
+
+        @include m.media-breakpoint-up(desktop) {
+            width: 80% ;
+        }
+
         &-header {
             height: 32px;            
             margin-top: -60px ;
+
+            @include m.media-breakpoint-up(tablet) {
+                height: 40px;
+                margin-top: -50px
+            }
+
+            @include m.media-breakpoint-up(desktop) {
+                height: 40px;
+                margin-top: -40px
+            }
         }
 
         &-body {
-            padding: f.pxToRem(5) f.pxToRem(13) f.pxToRem(40) f.pxToRem(13); 
-        }
+            padding: f.pxToRem(5) f.pxToRem(13) f.pxToRem(40) f.pxToRem(13);
+            
+            @include m.media-breakpoint-up(tablet) {
+                padding: f.pxToRem(11) 0 f.pxToRem(40) 0;
 
-    }   
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+
+    &__wrapper {
+
+        @include m.media-breakpoint-up(tablet) {
+            width: 90%;
+            max-width: 634px;
+        }
+    }
+
+       
 
     &__restaurant-title {
         display: flex;

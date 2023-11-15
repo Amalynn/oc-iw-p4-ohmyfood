@@ -34,18 +34,19 @@
     .cta {
         margin-top: f.pxToRem(27);
     }
+
+    &-restaurants {
+        height: f.pxToRem(275);
+    
+        @include m.media-breakpoint-up(tablet) {
+            height: f.pxToRem(383);
+        }
+    
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
 } 
 
-.hero-restaurants {
-    height: f.pxToRem(275);
-
-    @include m.media-breakpoint-up(destop) {
-        height: f.pxToRem(383);
-    }
-
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-}
