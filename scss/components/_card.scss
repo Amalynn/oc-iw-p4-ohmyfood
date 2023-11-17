@@ -1,21 +1,24 @@
 @use '../utils/variables' as v ;
 @use '../utils/functions' as f ;
 
-/* Cards */
+/*---------------------------------------------------------------------- */
+/* CARDS */
 .card {
     background-color: map-get(v.$colors, white-clr);
     border-radius: 15px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+    overflow: hidden;  
+    cursor: pointer; 
 
     &--gray {
         background-color: map-get(v.$colors, very-light-gray-mostly-white);
     }
 
-    &__content {
+    &__content {        
+        padding: 16px 25px 12px 13px;   
         display: flex;
-        padding: 16px 25px 12px 13px; 
-        justify-content: space-between;       
+        justify-content: space-between;   
+
     }    
 
     h3 {
@@ -26,6 +29,6 @@
        display: flex;
        align-items: center;
        font-size: 22px;
-    }
+    }    
 }
 

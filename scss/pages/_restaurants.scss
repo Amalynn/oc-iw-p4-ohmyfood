@@ -59,9 +59,7 @@
             width: 90%;
             max-width: 634px;
         }
-    }
-
-       
+    }       
 
     &__restaurant-title {
         display: flex;
@@ -104,34 +102,73 @@
     &__dessert-description > article:not(:last-child) {
         margin-top: f.pxToRem(12);
         margin-bottom: f.pxToRem(12);
-    }   
-
-    .card__content {
-        padding: f.pxToRem(15);
-
-        h3 {
-            font-weight: map-get(v.$font-weights, medium);
-            font-size: map-get(v.$font-sizes, fs-500);
-        }
-
-        p {
-            font-weight: map-get(v.$font-weights, light);
-            font-size: map-get(v.$font-sizes, fs-300);
-        }
-    }
-
-    .card__price {
+    } 
+    
+    .card {
         display: flex;
-        align-items: flex-end;
+        justify-content: space-between;            
 
-        p {
-            color: map-get(v.$colors, very-dark-gray);
-            font-size: map-get(v.$font-sizes, fs-300);
-            font-weight: map-get(v.$font-weights, bold);
-        } 
-    }
+        &__content {
+            padding: f.pxToRem(15);
+            width: 100%;
+            overflow: hidden;        
+            flex: 1 1 auto;
 
-    &__button {
-        text-align: center;        
+            h3 {
+                font-weight: map-get(v.$font-weights, medium);
+                font-size: map-get(v.$font-sizes, fs-500);
+            }
+
+            p {
+                font-weight: map-get(v.$font-weights, light);
+                font-size: map-get(v.$font-sizes, fs-300);
+            }
+
+            h3, p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+
+        &__text {
+            min-width: 0;
+        }
+
+        &__confirmation-order {
+            display: flex;
+
+            transform: translateX(59px);
+            transition: transform 1.5s cubic-bezier(.38, .24, .01, 1);
+        }
+
+        &__price {
+            display: flex;
+            align-items: flex-end;
+
+            margin-left: f.pxToRem(5);
+            padding-bottom: f.pxToRem(15);
+            padding-right: f.pxToRem(15);
+
+            p {
+                color: map-get(v.$colors, very-dark-gray);
+                font-size: map-get(v.$font-sizes, fs-300);
+                font-weight: map-get(v.$font-weights, bold);
+            } 
+        }
+
+        &__validation-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 59px;             
+        }
+
+        &:hover {
+            .card__confirmation-order {
+                transform: translateX(0);
+            }
+        }
     }    
 }

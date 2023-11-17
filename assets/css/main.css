@@ -43,19 +43,21 @@ a {
   text-decoration: none;
 }
 
-/* Cards */
+/*---------------------------------------------------------------------- */
+/* CARDS */
 .card {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  cursor: pointer;
 }
 .card--gray {
   background-color: hsl(0deg, 0%, 97%);
 }
 .card__content {
-  display: flex;
   padding: 16px 25px 12px 13px;
+  display: flex;
   justify-content: space-between;
 }
 .card h3 {
@@ -105,6 +107,17 @@ a {
   opacity: 0;
   z-index: -1;
   transition: opacity 550ms ease-in-out;
+}
+
+/* ADD MENU BUTTON */
+.add-menu-button {
+  background-color: hsl(165deg, 56%, 74%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.25rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* --------------------------------------------------- */
@@ -387,7 +400,7 @@ a {
 .restaurants {
   display: flex;
   justify-content: center;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0deg, 0%, 97%);
 }
 .restaurants > a {
   width: 100%;
@@ -521,8 +534,15 @@ a {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
+.menu .card {
+  display: flex;
+  justify-content: space-between;
+}
 .menu .card__content {
   padding: 0.9375rem;
+  width: 100%;
+  overflow: hidden;
+  flex: 1 1 auto;
 }
 .menu .card__content h3 {
   font-weight: 500;
@@ -532,17 +552,39 @@ a {
   font-weight: 300;
   font-size: 0.9375rem;
 }
+.menu .card__content h3, .menu .card__content p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu .card__text {
+  min-width: 0;
+}
+.menu .card__confirmation-order {
+  display: flex;
+  transform: translateX(59px);
+  transition: transform 1.5s cubic-bezier(0.38, 0.24, 0.01, 1);
+}
 .menu .card__price {
   display: flex;
   align-items: flex-end;
+  margin-left: 0.3125rem;
+  padding-bottom: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 .menu .card__price p {
   color: hsl(0deg, 0%, 21%);
   font-size: 0.9375rem;
   font-weight: 700;
 }
-.menu__button {
-  text-align: center;
+.menu .card__validation-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 59px;
+}
+.menu .card:hover .card__confirmation-order {
+  transform: translateX(0);
 }
 
 /*# sourceMappingURL=main.css.map */
