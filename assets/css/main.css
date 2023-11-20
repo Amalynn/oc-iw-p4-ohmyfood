@@ -506,6 +506,24 @@ a {
   font-weight: 300;
 }
 
+/*------------------------------------------------------ */
+/* Slide in right */
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  65% {
+    transform: translateX(3%);
+    animation-timing-function: cubic-bezier(0.53, -0.01, 0.46, 0.9);
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /* ------------------------------------------------- */
 /* RESTAURANTS MENU */
 .menu__background {
@@ -608,6 +626,35 @@ a {
 .menu .card {
   display: flex;
   justify-content: space-between;
+  -webkit-animation: slide-in-right 3s both;
+  animation: slide-in-right 3s both;
+}
+.menu .card-animation--0 {
+  animation-delay: 0ms;
+}
+.menu .card-animation--1 {
+  animation-delay: 400ms;
+}
+.menu .card-animation--2 {
+  animation-delay: 800ms;
+}
+.menu .card-animation--3 {
+  animation-delay: 1200ms;
+}
+.menu .card-animation--4 {
+  animation-delay: 1600ms;
+}
+.menu .card-animation--5 {
+  animation-delay: 2000ms;
+}
+.menu .card-animation--6 {
+  animation-delay: 2400ms;
+}
+.menu .card-animation--7 {
+  animation-delay: 2800ms;
+}
+.menu .card-animation--8 {
+  animation-delay: 3200ms;
 }
 .menu .card__content {
   padding: 0.9375rem;

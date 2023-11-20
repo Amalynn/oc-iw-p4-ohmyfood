@@ -1,9 +1,15 @@
 @use '../utils/variables' as v ;
 @use '../utils/mixins' as m ;
 @use '../utils/functions' as f;
+@use '../utils/animations' as * ;
+@use 'sass:math';
 
 /* ------------------------------------------------- */
 /* RESTAURANTS MENU */ 
+
+$animation-duration : 3000ms ;
+$animation-delay: 400ms ; 
+$animation-number: 9 ;
 
 .menu {     
 
@@ -119,7 +125,16 @@
     
     .card {
         display: flex;
-        justify-content: space-between;            
+        justify-content: space-between;   
+        
+        -webkit-animation: slide-in-right 3s both;
+        animation: slide-in-right 3s both ;
+
+        @for $i from 0 to $animation-number {
+            &-animation--#{$i} {
+                animation-delay: $animation-delay * $i;
+            }
+        }
 
         &__content {
             padding: f.pxToRem(15);
@@ -183,9 +198,9 @@
                 transform: translateX(0);
             }
         }
-    } 
-    
+    }
+       
     &__button {
         text-align: center;
-    }
+    }    
 }
