@@ -1,0 +1,73 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+
+
+/* -------------------------------------------------- */
+/* LIKE ICON */
+
+.like-icon {
+    border: none;
+    height: 22px;
+    width: 22px;
+    background-color: map-get(v.$colors, white-clr);
+    cursor: pointer;
+    position: relative;
+
+    i {
+        font-size: f.pxToRem(22);
+    }
+
+    .heart-fill {
+        background: linear-gradient(map-get(v.$colors, soft-violet), map-get(v.$colors, very-light-pink));
+        background: -webkit-linear-gradient(map-get(v.$colors, soft-violet), map-get(v.$colors, very-light-pink));
+        background-clip: text;        
+        -webkit-background-clip: text;       
+        -webkit-text-fill-color: transparent;
+
+        position: relative;
+        opacity: 1;
+
+        -webkit-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83) ;
+        -moz-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
+        -ms-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
+        -o-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
+        transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
+    }
+
+    .heart-outline {
+        position: absolute;
+        background-color: white;
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+
+        -webkit-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83) ;
+        -moz-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
+        -ms-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
+        -o-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
+        transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
+    }
+
+    &:not(:hover) {
+        & .heart-outline {
+            opacity: 1;
+        }
+
+        & .heart-fill {
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        & .heart-outline {
+            opacity: 0;
+        }
+
+        & .heart-fill {
+            opacity: 1 ;
+        }
+    }
+}

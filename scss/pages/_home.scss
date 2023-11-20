@@ -179,6 +179,7 @@
     }
 
     .card__content {
+        align-items: center;
 
         h3 {
             font-size: map-get(v.$font-sizes, fs-500);

@@ -172,6 +172,60 @@ a {
   width: 80px;
 }
 
+/* -------------------------------------------------- */
+/* LIKE ICON */
+.like-icon {
+  border: none;
+  height: 22px;
+  width: 22px;
+  background-color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  position: relative;
+}
+.like-icon i {
+  font-size: 1.375rem;
+}
+.like-icon .heart-fill {
+  background: linear-gradient(hsl(267deg, 66%, 60%), hsl(317deg, 100%, 74%));
+  background: -webkit-linear-gradient(hsl(267deg, 66%, 60%), hsl(317deg, 100%, 74%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  opacity: 1;
+  -webkit-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
+  -moz-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
+  -ms-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
+  -o-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
+  transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
+}
+.like-icon .heart-outline {
+  position: absolute;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
+  -moz-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
+  -ms-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
+  -o-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
+  transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
+}
+.like-icon:not(:hover) .heart-outline {
+  opacity: 1;
+}
+.like-icon:not(:hover) .heart-fill {
+  opacity: 0;
+}
+.like-icon:hover .heart-outline {
+  opacity: 0;
+}
+.like-icon:hover .heart-fill {
+  opacity: 1;
+}
+
 /* --------------------------------------------------- */
 /* HEADER */
 .header {
@@ -440,6 +494,9 @@ a {
   right: 0;
   margin: 12px 12px 0 0;
 }
+.restaurants .card__content {
+  align-items: center;
+}
 .restaurants .card__content h3 {
   font-size: 1.125rem;
   font-weight: 700;
@@ -506,6 +563,12 @@ a {
 .menu__restaurant-title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .menu__restaurant-title {
+    justify-content: center;
+  }
 }
 .menu__restaurant-title h1 {
   font-family: "Shrikhand", serif;
@@ -514,7 +577,15 @@ a {
   margin-left: 0.25rem;
 }
 .menu__icon {
-  margin-right: 1.5rem;
+  margin-right: 1.75rem;
+  height: 22px;
+  width: 22px;
+}
+@media only screen and (min-width: 768px) {
+  .menu__icon {
+    margin-right: 0;
+    margin-left: 1.5rem;
+  }
 }
 .menu__starter, .menu__main, .menu__dessert {
   margin: 2.5rem 0;
@@ -585,6 +656,9 @@ a {
 }
 .menu .card:hover .card__confirmation-order {
   transform: translateX(0);
+}
+.menu__button {
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -45,15 +45,19 @@
                 <div class="menu__background-header"></div>
 
                 <div class="menu__background-body">
-                    <div class="menu__restaurant-title">
-                        <h1>La palette du goût</h1>
-                        <div class="menu__icon icon-like">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
 
                     <div class="menu__wrapper">
 
+                        <!--Menu title -->
+                        <div class="menu__restaurant-title">
+                            <h1>La palette du goût</h1>
+                            <button type="button" class="menu__icon like-icon">
+                                <i class="fa-solid fa-heart heart-fill"></i>
+                                <i class="fa-regular fa-heart heart-outline"></i>
+                            </button>
+                        </div>                    
+
+                        <!-- Menu starter -->
                         <section class="menu__starter">
                             <h2><span class="menu__subtitle-underline">Entr</span>ées</h2>
                             
@@ -111,6 +115,7 @@
                             </div>
                         </section>
 
+                        <!-- Menu main -->
                         <section class="menu__main">
                             <h2><span class="menu__subtitle-underline">Plat</span>s</h2>
 
@@ -168,6 +173,7 @@
                             </div>
                         </section>
 
+                        <!--Menu dessert -->
                         <section class="menu__dessert">
                             <h2><span class="menu__subtitle-underline">Dess</span>erts</h2>
 
@@ -227,6 +233,7 @@
                         </section> 
                     </div>  
 
+                    <!-- CTA Button -->
                     <div class="menu__button">
                         <button class="cta">Commander</button>
                     </div>              
