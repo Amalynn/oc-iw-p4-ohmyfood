@@ -660,6 +660,9 @@ a {
 .menu .card-animation--8 {
   animation-delay: 3200ms;
 }
+.menu .card-animation--9 {
+  animation-delay: 3600ms;
+}
 .menu .card__content {
   display: flex;
   justify-content: space-between;
