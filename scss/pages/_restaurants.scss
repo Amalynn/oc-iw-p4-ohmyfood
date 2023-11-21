@@ -174,7 +174,8 @@ $animation-number: 9 ;
             display: flex;
             align-items: flex-end;
 
-            margin-left: f.pxToRem(5);
+            margin-left: f.pxToRem(-60);
+            margin-right: 5px;
             padding-bottom: f.pxToRem(15);
             padding-right: f.pxToRem(15);
 

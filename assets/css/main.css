@@ -686,7 +686,8 @@ a {
 .menu .card__price {
   display: flex;
   align-items: flex-end;
-  margin-left: 0.3125rem;
+  margin-left: -3.75rem;
+  margin-right: 5px;
   padding-bottom: 0.9375rem;
   padding-right: 0.9375rem;
 }
