@@ -1,0 +1,19 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+
+/* ------------------------------------------------------------------ */
+/* ADD MENU BUTTON */
+.add-menu-button {
+    background-color: map-get(v.$colors, very-soft-cyan);
+    color: v.$font-tertiary-color ;    
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    i {
+        font-size: f.pxToRem(20);
+    }
+}

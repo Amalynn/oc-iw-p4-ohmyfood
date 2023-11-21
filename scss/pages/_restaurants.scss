@@ -125,9 +125,9 @@ $animation-number: 9 ;
     
     .card {
         display: flex;
-        justify-content: space-between;   
+        justify-content: space-between;  
+        flex: 1 1 auto; 
         
-        -webkit-animation: slide-in-right 3s both;
         animation: slide-in-right 3s both ;
 
         @for $i from 0 to $animation-number {
@@ -137,10 +137,13 @@ $animation-number: 9 ;
         }
 
         &__content {
-            padding: f.pxToRem(15);
+            display: flex;
+            justify-content: space-between;            
+
             width: 100%;
+            padding: f.pxToRem(15);            
             overflow: hidden;        
-            flex: 1 1 auto;
+            
 
             h3 {
                 font-weight: map-get(v.$font-weights, medium);
@@ -161,24 +164,13 @@ $animation-number: 9 ;
 
         &__text {
             min-width: 0;
-        }
-
-        &__confirmation-order {
-            display: flex;
-
-            transform: translateX(59px);
-            transition: transform 1.5s cubic-bezier(.38, .24, .01, 1);
-        }
+        }      
 
         &__price {
             display: flex;
             align-items: flex-end;
-
-            margin-left: f.pxToRem(-60);
-            margin-right: 5px;
-            padding-bottom: f.pxToRem(15);
-            padding-right: f.pxToRem(15);
-
+            margin-left: f.pxToRem(5);
+            
             p {
                 color: map-get(v.$colors, very-dark-gray);
                 font-size: map-get(v.$font-sizes, fs-300);
@@ -186,17 +178,15 @@ $animation-number: 9 ;
             } 
         }
 
-        &__validation-menu {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            width: 59px;             
+        &__confirmation-order {
+            width: f.pxToRem(59);
+            margin-right: f.pxToRem(-60);
+            transition: margin-right 350ms cubic-bezier(.38, .24, .01, 1);                       
         }
 
         &:hover {
             .card__confirmation-order {
-                transform: translateX(0);
+                margin-right: 0;
             }
         }
     }

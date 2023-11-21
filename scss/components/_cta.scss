@@ -54,14 +54,3 @@
 }
 
 
-/* ADD MENU BUTTON */
-.add-menu-button {
-    background-color: map-get(v.$colors, very-soft-cyan);
-    color: v.$font-tertiary-color ;
-    font-size: f.pxToRem(20);
-    border: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
