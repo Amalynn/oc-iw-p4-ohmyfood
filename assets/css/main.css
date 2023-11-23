@@ -167,7 +167,7 @@ a {
   border: none;
   height: 22px;
   width: 22px;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: transparent;
   cursor: pointer;
   position: relative;
 }
@@ -182,24 +182,17 @@ a {
   -webkit-text-fill-color: transparent;
   position: relative;
   opacity: 1;
-  -webkit-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
-  -moz-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
-  -ms-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
-  -o-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
   transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
 }
 .like-icon .heart-outline {
   position: absolute;
-  background-color: white;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   opacity: 0;
-  -webkit-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
-  -moz-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
-  -ms-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
-  -o-transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
+  background-clip: text;
+  -webkit-background-clip: text;
   transition: opacity 500ms cubic-bezier(0.34, 0, 0.82, 0.83);
 }
 .like-icon:not(:hover) .heart-outline {

@@ -9,7 +9,7 @@
     border: none;
     height: 22px;
     width: 22px;
-    background-color: map-get(v.$colors, white-clr);
+    background-color: transparent;
     cursor: pointer;
     position: relative;
 
@@ -26,28 +26,21 @@
 
         position: relative;
         opacity: 1;
-
-        -webkit-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83) ;
-        -moz-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
-        -ms-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
-        -o-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
+     
         transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
     }
 
     .heart-outline {
         position: absolute;
-        background-color: white;
-
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         opacity: 0;
 
-        -webkit-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83) ;
-        -moz-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
-        -ms-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
-        -o-transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
+        background-clip: text;
+        -webkit-background-clip: text;         
+     
         transition: opacity 500ms cubic-bezier(.34, 0, .82, .83);
     }
 
