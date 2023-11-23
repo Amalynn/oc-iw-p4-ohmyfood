@@ -43,6 +43,15 @@ $cta-background-color: linear-gradient(to bottom, map-get($colors, very-light-pi
 $heart-icon-background-color: linear-gradient(to top, map-get($colors, very-light-pink), map-get($colors, soft-violet));
 
 
+// Colors Loader
+$colors-loader: (
+  "dark-cyan": hsl(165, 100%, 26%),
+  "soft-blue": hsl(207, 92%, 76%),
+  "very-dark-blue": hsl(207, 100%, 20%),
+  "soft-violet": hsl(267, 66%, 60%)
+);
+
+
 // Breakpoints
 $breakpoints-up: (
     "tablet": 768px,

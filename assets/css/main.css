@@ -340,6 +340,54 @@ a {
   }
 }
 
+/* --------------------------------------------- */
+/* CSS LOADER */
+.loader {
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  background: linear-gradient(180deg, rgb(53, 53, 53), rgba(53, 53, 53, 0.7));
+  position: fixed;
+  z-index: 3;
+  text-align: center;
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fade-out-loader 3s forwards;
+}
+.loader p {
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Shrikhand", serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.9375rem;
+}
+.loader span {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  animation: translateY-dot 300ms ease-in-out infinite alternate;
+}
+.loader span:not(:last-of-type) {
+  margin-right: 10px;
+}
+.loader--dark-cyan {
+  background-color: hsl(165deg, 100%, 26%);
+}
+.loader--soft-blue {
+  background-color: hsl(207deg, 92%, 76%);
+}
+.loader--very-dark-blue {
+  background-color: hsl(207deg, 100%, 20%);
+}
+.loader--soft-violet {
+  background-color: hsl(267deg, 66%, 60%);
+}
+.loader span:nth-child(2n) {
+  animation-delay: 0.3s;
+}
+
 /* ------------------------------------------------ */
 /* OHMYFOOD HOMEPAGE  */
 /* Wrapper */
@@ -510,6 +558,28 @@ a {
   font-weight: 300;
 }
 
+/* ----------------------------------------------------- */
+/* Fade out loader */
+@keyframes fade-out-loader {
+  60% {
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.27, 0, 0.3, 0.87);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* ------------------------------------------------------- */
+/* TranslateY-dot */
+@keyframes translateY-dot {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(25px);
+  }
+}
 /*------------------------------------------------------ */
 /* Slide in right */
 @keyframes slide-in-right {

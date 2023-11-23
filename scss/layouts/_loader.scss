@@ -1,0 +1,50 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+
+/* --------------------------------------------- */
+/* CSS LOADER */
+
+.loader {
+    height: 100vh;
+    width: 100vw;  
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(53, 53, 53, 1), rgba(53, 53, 53, 0.7));
+    position: fixed;
+    z-index: 3;
+    text-align: center;
+    visibility: visible;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fade-out-loader 3s forwards ;
+
+    p {
+        color: v.$font-tertiary-color;
+        font-family: v.$shrikhand;
+        font-size: f.pxToRem(40);
+        margin-bottom: f.pxToRem(15);        
+    }
+
+    span { 
+        display: inline-block; 
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        animation: translateY-dot 300ms ease-in-out infinite alternate; 
+    }  
+          
+    span:not(:last-of-type){
+        margin-right: 10px;
+    } 
+      
+    @each $color, $hsl in v.$colors-loader {
+        &--#{$color} {
+        background-color: $hsl;
+        }        
+    }
+      
+    span:nth-child(2n){
+        animation-delay: 0.3s;
+    }
+}
