@@ -36,20 +36,20 @@ For the first stage of this project, the goal was to have a first web site worki
 
 ### Links
 
-    - Solution URL: [My github solution here](https://github.com/Amalynn/oc-iw-p4-ohmyfood.git)
-    - Live site URL: [My live site here](https://amalynn.github.io/oc-iw-p4-ohmyfood/)
+- Solution URL: [My github solution here](https://github.com/Amalynn/oc-iw-p4-ohmyfood.git)
+- Live site URL: [My live site here](https://amalynn.github.io/oc-iw-p4-ohmyfood/)
 
 
 ## My process
 
 This project was built with :
 
-    - Mobile-first approach
-    - HTML5
-    - CSS3
-    - Sass : dart-Sass version 1.56.0
-    - npm: version 9.5.0
-    - NodeJS : version 18.14.0
+- Mobile-first approach
+- HTML5
+- CSS3
+- Sass : dart-Sass version 1.56.0
+- npm: version 9.5.0
+- NodeJS : version 18.14.0
 
 ## Skills evaluated
 
